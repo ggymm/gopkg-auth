@@ -1,4 +1,4 @@
-module gopkg-auth
+module github.com/ggymm/gopkg-auth
 
 go 1.21
 
