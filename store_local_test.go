@@ -10,7 +10,7 @@ import (
 func newLocalStore() *LocalStore {
 	s, err := newLocal(LocalConfig{
 		Dir: "C:/Product/gopkg/temp/auth/storage",
-	}, logger.InitCustom("C:/Product/gopkg/temp/auth/auth.log"))
+	}, logger.Init("C:/Product/gopkg/temp/auth/auth.log"))
 	if err != nil {
 		panic(err)
 		return nil

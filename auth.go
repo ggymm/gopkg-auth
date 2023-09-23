@@ -62,7 +62,7 @@ func Init(c Config) (err error) {
 	}
 
 	// 初始化日志
-	auth.log = logger.InitCustom(c.LogPath)
+	auth.log = logger.Init(c.LogPath)
 
 	switch c.Store {
 	case Local:
