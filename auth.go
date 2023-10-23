@@ -8,7 +8,7 @@ import (
 	"github.com/google/uuid"
 	"github.com/rs/zerolog"
 
-	"github.com/ggymm/gopkg/convert"
+	"github.com/ggymm/gopkg/conv"
 	"github.com/ggymm/gopkg/logger"
 	"github.com/ggymm/gopkg/utils"
 )
@@ -99,7 +99,7 @@ func (a *Auth) parseTokenValue(value []byte) (int64, time.Duration, int64) {
 	if len(split) < 3 {
 		return 0, 0, 0
 	}
-	return convert.ToInt64(split[0]), time.Duration(convert.ToInt64(split[1])), convert.ToInt64(split[2])
+	return conv.ToInt64(split[0]), time.Duration(conv.ToInt64(split[1])), conv.ToInt64(split[2])
 }
 
 // 创建 token
